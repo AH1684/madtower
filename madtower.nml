@@ -561,7 +561,7 @@ item (FEAT_OBJECTS, object_madtower) {
 		remove_cost_multiplier: 8;
 		introduction_date:      0x00000000;
 		end_of_life_date:       0xFFFFFFFF;
-		object_flags:           bitmask();
+		object_flags:           param_remove == 0 ? bitmask() : bitmask(OBJ_FLAG_IRREMOVABLE, OBJ_FLAG_ONLY_SE);
 		height:                 8;
 		num_views:              1;
 	}
