@@ -1,0 +1,572 @@
+grf {
+	grfid: "MBT1";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESC);
+	url:  string(STR_GRF_URL);
+	version: 1;
+	min_compatible_version: 0;
+	param 0 {
+		param_remove {
+			name:      string(STR_PAR_REMOVE_NAME);
+			desc:      string(STR_PAR_REMOVE_DESC);
+			type:      bool;
+			def_value: 0;
+		}
+	}
+}
+
+// GROUND
+spriteset (spriteset_sandstone, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/sandstone.png") {[0, 0, 64, 31, -31, 0]}
+spriteset (spriteset_empty, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/empty_pixel.png") {[0, 0, 1, 1, 0, 0]}
+
+//MENU
+spriteset (spriteset_madtower_menu, "gfx/madtower_menu.png") {[-32,-16]}
+
+// madtower
+spriteset(spriteset_madtower_a_0_0, "gfx/madtower.png") {[ 224, 0, 64, 218, -31, -202 ]}
+spriteset(spriteset_madtower_a_0_0_snow, "gfx/madtowersnow.png") {[ 224, 0, 64, 218, -31, -202 ]}
+spriteset(spriteset_madtower_a_0_1, "gfx/madtower.png") {[ 288, 0, 32, 234, 1, -218 ]}
+spriteset(spriteset_madtower_a_0_1_snow, "gfx/madtowersnow.png") {[ 288, 0, 32, 234, 1, -218 ]}
+spriteset(spriteset_madtower_a_0_2, "gfx/madtower.png") {[ 320, 0, 32, 250, 1, -234 ]}
+spriteset(spriteset_madtower_a_0_2_snow, "gfx/madtowersnow.png") {[ 320, 0, 32, 250, 1, -234 ]}
+spriteset(spriteset_madtower_a_0_3, "gfx/madtower.png") {[ 352, 0, 32, 266, 1, -250 ]}
+spriteset(spriteset_madtower_a_0_3_snow, "gfx/madtowersnow.png") {[ 352, 0, 32, 266, 1, -250 ]}
+spriteset(spriteset_madtower_a_0_4, "gfx/madtower.png") {[ 384, 0, 32, 282, 1, -266 ]}
+spriteset(spriteset_madtower_a_0_4_snow, "gfx/madtowersnow.png") {[ 384, 0, 32, 282, 1, -266 ]}
+spriteset(spriteset_madtower_a_0_5, "gfx/madtower.png") {[ 416, 0, 32, 298, 1, -282 ]}
+spriteset(spriteset_madtower_a_0_5_snow, "gfx/madtowersnow.png") {[ 416, 0, 32, 298, 1, -282 ]}
+spriteset(spriteset_madtower_a_0_6, "gfx/madtower.png") {[ 448, 0, 32, 314, 1, -298 ]}
+spriteset(spriteset_madtower_a_0_6_snow, "gfx/madtowersnow.png") {[ 448, 0, 32, 314, 1, -298 ]}
+spriteset(spriteset_madtower_a_0_7, "gfx/madtower.png") {[ 480, 0, 32, 345, 1, -314 ]}
+spriteset(spriteset_madtower_a_0_7_snow, "gfx/madtowersnow.png") {[ 480, 0, 32, 345, 1, -314 ]}
+spriteset(spriteset_madtower_a_1_0, "gfx/madtower.png") {[ 192, 0, 32, 234, -31, -218 ]}
+spriteset(spriteset_madtower_a_1_0_snow, "gfx/madtowersnow.png") {[ 192, 0, 32, 234, -31, -218 ]}
+spriteset(spriteset_madtower_a_1_1, "gfx/madtower.png") {[ 224, 218, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_1_1_snow, "gfx/madtowersnow.png") {[ 224, 218, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_1_2, "gfx/madtower.png") {[ 288, 234, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_2_snow, "gfx/madtowersnow.png") {[ 288, 234, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_3, "gfx/madtower.png") {[ 320, 250, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_3_snow, "gfx/madtowersnow.png") {[ 320, 250, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_4, "gfx/madtower.png") {[ 352, 266, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_4_snow, "gfx/madtowersnow.png") {[ 352, 266, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_5, "gfx/madtower.png") {[ 384, 282, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_5_snow, "gfx/madtowersnow.png") {[ 384, 282, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_6, "gfx/madtower.png") {[ 416, 298, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_6_snow, "gfx/madtowersnow.png") {[ 416, 298, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_7, "gfx/madtower.png") {[ 448, 314, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_1_7_snow, "gfx/madtowersnow.png") {[ 448, 314, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_0, "gfx/madtower.png") {[ 160, 0, 32, 250, -31, -234 ]}
+spriteset(spriteset_madtower_a_2_0_snow, "gfx/madtowersnow.png") {[ 160, 0, 32, 250, -31, -234 ]}
+spriteset(spriteset_madtower_a_2_1, "gfx/madtower.png") {[ 192, 234, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_2_1_snow, "gfx/madtowersnow.png") {[ 192, 234, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_2_2, "gfx/madtower.png") {[ 224, 250, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_2_2_snow, "gfx/madtowersnow.png") {[ 224, 250, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_2_3, "gfx/madtower.png") {[ 288, 266, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_3_snow, "gfx/madtowersnow.png") {[ 288, 266, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_4, "gfx/madtower.png") {[ 320, 282, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_4_snow, "gfx/madtowersnow.png") {[ 320, 282, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_5, "gfx/madtower.png") {[ 352, 298, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_5_snow, "gfx/madtowersnow.png") {[ 352, 298, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_6, "gfx/madtower.png") {[ 384, 314, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_6_snow, "gfx/madtowersnow.png") {[ 384, 314, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_7, "gfx/madtower.png") {[ 416, 330, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_2_7_snow, "gfx/madtowersnow.png") {[ 416, 330, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_0, "gfx/madtower.png") {[ 128, 0, 32, 266, -31, -250 ]}
+spriteset(spriteset_madtower_a_3_0_snow, "gfx/madtowersnow.png") {[ 128, 0, 32, 266, -31, -250 ]}
+spriteset(spriteset_madtower_a_3_1, "gfx/madtower.png") {[ 160, 250, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_3_1_snow, "gfx/madtowersnow.png") {[ 160, 250, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_3_2, "gfx/madtower.png") {[ 192, 266, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_3_2_snow, "gfx/madtowersnow.png") {[ 192, 266, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_3_3, "gfx/madtower.png") {[ 224, 282, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_3_3_snow, "gfx/madtowersnow.png") {[ 224, 282, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_3_4, "gfx/madtower.png") {[ 288, 298, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_4_snow, "gfx/madtowersnow.png") {[ 288, 298, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_5, "gfx/madtower.png") {[ 320, 314, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_5_snow, "gfx/madtowersnow.png") {[ 320, 314, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_6, "gfx/madtower.png") {[ 352, 330, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_6_snow, "gfx/madtowersnow.png") {[ 352, 330, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_7, "gfx/madtower.png") {[ 384, 346, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_3_7_snow, "gfx/madtowersnow.png") {[ 384, 346, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_4_0, "gfx/madtower.png") {[ 96, 0, 32, 282, -31, -266 ]}
+spriteset(spriteset_madtower_a_4_0_snow, "gfx/madtowersnow.png") {[ 96, 0, 32, 282, -31, -266 ]}
+spriteset(spriteset_madtower_a_4_1, "gfx/madtower.png") {[ 128, 266, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_1_snow, "gfx/madtowersnow.png") {[ 128, 266, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_2, "gfx/madtower.png") {[ 160, 282, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_2_snow, "gfx/madtowersnow.png") {[ 160, 282, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_3, "gfx/madtower.png") {[ 192, 298, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_3_snow, "gfx/madtowersnow.png") {[ 192, 298, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_4, "gfx/madtower.png") {[ 224, 314, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_4_snow, "gfx/madtowersnow.png") {[ 224, 314, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_4_5, "gfx/madtower.png") {[ 288, 330, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_4_5_snow, "gfx/madtowersnow.png") {[ 288, 330, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_4_6, "gfx/madtower.png") {[ 320, 346, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_4_6_snow, "gfx/madtowersnow.png") {[ 320, 346, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_4_7, "gfx/madtower.png") {[ 352, 362, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_4_7_snow, "gfx/madtowersnow.png") {[ 352, 362, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_5_0, "gfx/madtower.png") {[ 64, 0, 32, 298, -31, -282 ]}
+spriteset(spriteset_madtower_a_5_0_snow, "gfx/madtowersnow.png") {[ 64, 0, 32, 298, -31, -282 ]}
+spriteset(spriteset_madtower_a_5_1, "gfx/madtower.png") {[ 96, 282, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_1_snow, "gfx/madtowersnow.png") {[ 96, 282, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_2, "gfx/madtower.png") {[ 128, 298, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_2_snow, "gfx/madtowersnow.png") {[ 128, 298, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_3, "gfx/madtower.png") {[ 160, 314, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_3_snow, "gfx/madtowersnow.png") {[ 160, 314, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_4, "gfx/madtower.png") {[ 192, 330, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_4_snow, "gfx/madtowersnow.png") {[ 192, 330, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_5, "gfx/madtower.png") {[ 224, 346, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_5_snow, "gfx/madtowersnow.png") {[ 224, 346, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_5_6, "gfx/madtower.png") {[ 288, 362, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_5_6_snow, "gfx/madtowersnow.png") {[ 288, 362, 32, 32, 1, -16 ]}
+spriteset(spriteset_madtower_a_5_7, "gfx/madtower.png") {[ 320, 378, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_5_7_snow, "gfx/madtowersnow.png") {[ 320, 378, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_6_0, "gfx/madtower.png") {[ 32, 0, 32, 314, -31, -298 ]}
+spriteset(spriteset_madtower_a_6_0_snow, "gfx/madtowersnow.png") {[ 32, 0, 32, 314, -31, -298 ]}
+spriteset(spriteset_madtower_a_6_1, "gfx/madtower.png") {[ 64, 298, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_1_snow, "gfx/madtowersnow.png") {[ 64, 298, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_2, "gfx/madtower.png") {[ 96, 314, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_2_snow, "gfx/madtowersnow.png") {[ 96, 314, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_3, "gfx/madtower.png") {[ 128, 330, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_3_snow, "gfx/madtowersnow.png") {[ 128, 330, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_4, "gfx/madtower.png") {[ 160, 346, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_4_snow, "gfx/madtowersnow.png") {[ 160, 346, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_5, "gfx/madtower.png") {[ 192, 362, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_5_snow, "gfx/madtowersnow.png") {[ 192, 362, 32, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_6, "gfx/madtower.png") {[ 224, 378, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_6_snow, "gfx/madtowersnow.png") {[ 224, 378, 64, 32, -31, -16 ]}
+spriteset(spriteset_madtower_a_6_7, "gfx/madtower.png") {[ 288, 394, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_6_7_snow, "gfx/madtowersnow.png") {[ 288, 394, 32, 47, 1, -16 ]}
+spriteset(spriteset_madtower_a_7_0, "gfx/madtower.png") {[ 0, 0, 32, 345, -31, -314 ]}
+spriteset(spriteset_madtower_a_7_0_snow, "gfx/madtowersnow.png") {[ 0, 0, 32, 345, -31, -314 ]}
+spriteset(spriteset_madtower_a_7_1, "gfx/madtower.png") {[ 32, 314, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_1_snow, "gfx/madtowersnow.png") {[ 32, 314, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_2, "gfx/madtower.png") {[ 64, 330, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_2_snow, "gfx/madtowersnow.png") {[ 64, 330, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_3, "gfx/madtower.png") {[ 96, 346, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_3_snow, "gfx/madtowersnow.png") {[ 96, 346, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_4, "gfx/madtower.png") {[ 128, 362, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_4_snow, "gfx/madtowersnow.png") {[ 128, 362, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_5, "gfx/madtower.png") {[ 160, 378, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_5_snow, "gfx/madtowersnow.png") {[ 160, 378, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_6, "gfx/madtower.png") {[ 192, 394, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_6_snow, "gfx/madtowersnow.png") {[ 192, 394, 32, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_7, "gfx/madtower.png") {[ 224, 410, 64, 47, -31, -16 ]}
+spriteset(spriteset_madtower_a_7_7_snow, "gfx/madtowersnow.png") {[ 224, 410, 64, 47, -31, -16 ]}
+
+spritelayout spritelayout_madtower_a_0_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_0_snow(); hide_sprite: (nearby_tile_height(0,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_0_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_1_snow(); hide_sprite: (nearby_tile_height(0,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_0_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_2_snow(); hide_sprite: (nearby_tile_height(0,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_0_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_3_snow(); hide_sprite: (nearby_tile_height(0,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_0_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_4_snow(); hide_sprite: (nearby_tile_height(0,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_0_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_5_snow(); hide_sprite: (nearby_tile_height(0,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_0_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_6_snow(); hide_sprite: (nearby_tile_height(0,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_0_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(0,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_0_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_0_7_snow(); hide_sprite: (nearby_tile_height(0,-7) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_0_snow(); hide_sprite: (nearby_tile_height(-1,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_1_snow(); hide_sprite: (nearby_tile_height(-1,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_2_snow(); hide_sprite: (nearby_tile_height(-1,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_3_snow(); hide_sprite: (nearby_tile_height(-1,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_4_snow(); hide_sprite: (nearby_tile_height(-1,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_5_snow(); hide_sprite: (nearby_tile_height(-1,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_6_snow(); hide_sprite: (nearby_tile_height(-1,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_1_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-1,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_1_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_1_7_snow(); hide_sprite: (nearby_tile_height(-1,-7) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_0_snow(); hide_sprite: (nearby_tile_height(-2,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_1_snow(); hide_sprite: (nearby_tile_height(-2,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_2_snow(); hide_sprite: (nearby_tile_height(-2,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_3_snow(); hide_sprite: (nearby_tile_height(-2,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_4_snow(); hide_sprite: (nearby_tile_height(-2,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_5_snow(); hide_sprite: (nearby_tile_height(-2,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_6_snow(); hide_sprite: (nearby_tile_height(-2,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_2_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-2,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_2_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_2_7_snow(); hide_sprite: (nearby_tile_height(-2,-7) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_0_snow(); hide_sprite: (nearby_tile_height(-3,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_1_snow(); hide_sprite: (nearby_tile_height(-3,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_2_snow(); hide_sprite: (nearby_tile_height(-3,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_3_snow(); hide_sprite: (nearby_tile_height(-3,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_4_snow(); hide_sprite: (nearby_tile_height(-3,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_5_snow(); hide_sprite: (nearby_tile_height(-3,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_6_snow(); hide_sprite: (nearby_tile_height(-3,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_3_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-3,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_3_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_3_7_snow(); hide_sprite: (nearby_tile_height(-3,-7) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_0_snow(); hide_sprite: (nearby_tile_height(-4,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_1_snow(); hide_sprite: (nearby_tile_height(-4,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_2_snow(); hide_sprite: (nearby_tile_height(-4,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_3_snow(); hide_sprite: (nearby_tile_height(-4,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_4_snow(); hide_sprite: (nearby_tile_height(-4,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_5_snow(); hide_sprite: (nearby_tile_height(-4,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_6_snow(); hide_sprite: (nearby_tile_height(-4,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_4_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-4,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_4_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_4_7_snow(); hide_sprite: (nearby_tile_height(-4,-7) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_0_snow(); hide_sprite: (nearby_tile_height(-5,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_1_snow(); hide_sprite: (nearby_tile_height(-5,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_2_snow(); hide_sprite: (nearby_tile_height(-5,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_3_snow(); hide_sprite: (nearby_tile_height(-5,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_4_snow(); hide_sprite: (nearby_tile_height(-5,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_5_snow(); hide_sprite: (nearby_tile_height(-5,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_6_snow(); hide_sprite: (nearby_tile_height(-5,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_5_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-5,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_5_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_5_7_snow(); hide_sprite: (nearby_tile_height(-5,-7) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_0_snow(); hide_sprite: (nearby_tile_height(-6,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_1_snow(); hide_sprite: (nearby_tile_height(-6,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_2_snow(); hide_sprite: (nearby_tile_height(-6,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_3_snow(); hide_sprite: (nearby_tile_height(-6,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_4_snow(); hide_sprite: (nearby_tile_height(-6,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_5_snow(); hide_sprite: (nearby_tile_height(-6,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_6_snow(); hide_sprite: (nearby_tile_height(-6,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_6_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-6,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_6_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_6_7_snow(); hide_sprite: (nearby_tile_height(-6,-7) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_0 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,0) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_0(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_0_snow(); hide_sprite: (nearby_tile_height(-7,0) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_1 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,-1) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_1(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_1_snow(); hide_sprite: (nearby_tile_height(-7,-1) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_2 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,-2) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_2(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_2_snow(); hide_sprite: (nearby_tile_height(-7,-2) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_3 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,-3) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_3(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_3_snow(); hide_sprite: (nearby_tile_height(-7,-3) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_4 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,-4) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_4(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_4_snow(); hide_sprite: (nearby_tile_height(-7,-4) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_5 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,-5) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_5(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_5_snow(); hide_sprite: (nearby_tile_height(-7,-5) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_6 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,-6) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_6(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_6_snow(); hide_sprite: (nearby_tile_height(-7,-6) < snowline_height); zextent: 250; } }
+spritelayout spritelayout_madtower_a_7_7 {
+	ground { sprite: spriteset_sandstone(); }
+	childsprite { sprite: GROUNDSPRITE_SNOW; hide_sprite: nearby_tile_height(-7,-7) < snowline_height; }
+	building { sprite: spriteset_madtower_a_7_7(); zextent: 250; }
+	building { sprite: spriteset_madtower_a_7_7_snow(); hide_sprite: (nearby_tile_height(-7,-7) < snowline_height); zextent: 250; } }
+
+	//MENU
+spritelayout spritelayout_madtower_menu { ground { sprite: spriteset_empty; } building { sprite: spriteset_madtower_menu; } }
+
+switch(FEAT_OBJECTS, SELF, switch_spritelayout_madtower_a, relative_pos) {
+    relative_coord(0, 0): spritelayout_madtower_a_0_0;
+    relative_coord(0, 1): spritelayout_madtower_a_0_1;
+    relative_coord(0, 2): spritelayout_madtower_a_0_2;
+    relative_coord(0, 3): spritelayout_madtower_a_0_3;
+    relative_coord(0, 4): spritelayout_madtower_a_0_4;
+    relative_coord(0, 5): spritelayout_madtower_a_0_5;
+    relative_coord(0, 6): spritelayout_madtower_a_0_6;
+    relative_coord(0, 7): spritelayout_madtower_a_0_7;
+    relative_coord(1, 0): spritelayout_madtower_a_1_0;
+    relative_coord(1, 1): spritelayout_madtower_a_1_1;
+    relative_coord(1, 2): spritelayout_madtower_a_1_2;
+    relative_coord(1, 3): spritelayout_madtower_a_1_3;
+    relative_coord(1, 4): spritelayout_madtower_a_1_4;
+    relative_coord(1, 5): spritelayout_madtower_a_1_5;
+    relative_coord(1, 6): spritelayout_madtower_a_1_6;
+    relative_coord(1, 7): spritelayout_madtower_a_1_7;
+    relative_coord(2, 0): spritelayout_madtower_a_2_0;
+    relative_coord(2, 1): spritelayout_madtower_a_2_1;
+    relative_coord(2, 2): spritelayout_madtower_a_2_2;
+    relative_coord(2, 3): spritelayout_madtower_a_2_3;
+    relative_coord(2, 4): spritelayout_madtower_a_2_4;
+    relative_coord(2, 5): spritelayout_madtower_a_2_5;
+    relative_coord(2, 6): spritelayout_madtower_a_2_6;
+    relative_coord(2, 7): spritelayout_madtower_a_2_7;
+    relative_coord(3, 0): spritelayout_madtower_a_3_0;
+    relative_coord(3, 1): spritelayout_madtower_a_3_1;
+    relative_coord(3, 2): spritelayout_madtower_a_3_2;
+    relative_coord(3, 3): spritelayout_madtower_a_3_3;
+    relative_coord(3, 4): spritelayout_madtower_a_3_4;
+    relative_coord(3, 5): spritelayout_madtower_a_3_5;
+    relative_coord(3, 6): spritelayout_madtower_a_3_6;
+    relative_coord(3, 7): spritelayout_madtower_a_3_7;
+    relative_coord(4, 0): spritelayout_madtower_a_4_0;
+    relative_coord(4, 1): spritelayout_madtower_a_4_1;
+    relative_coord(4, 2): spritelayout_madtower_a_4_2;
+    relative_coord(4, 3): spritelayout_madtower_a_4_3;
+    relative_coord(4, 4): spritelayout_madtower_a_4_4;
+    relative_coord(4, 5): spritelayout_madtower_a_4_5;
+    relative_coord(4, 6): spritelayout_madtower_a_4_6;
+    relative_coord(4, 7): spritelayout_madtower_a_4_7;
+    relative_coord(5, 0): spritelayout_madtower_a_5_0;
+    relative_coord(5, 1): spritelayout_madtower_a_5_1;
+    relative_coord(5, 2): spritelayout_madtower_a_5_2;
+    relative_coord(5, 3): spritelayout_madtower_a_5_3;
+    relative_coord(5, 4): spritelayout_madtower_a_5_4;
+    relative_coord(5, 5): spritelayout_madtower_a_5_5;
+    relative_coord(5, 6): spritelayout_madtower_a_5_6;
+    relative_coord(5, 7): spritelayout_madtower_a_5_7;
+    relative_coord(6, 0): spritelayout_madtower_a_6_0;
+    relative_coord(6, 1): spritelayout_madtower_a_6_1;
+    relative_coord(6, 2): spritelayout_madtower_a_6_2;
+    relative_coord(6, 3): spritelayout_madtower_a_6_3;
+    relative_coord(6, 4): spritelayout_madtower_a_6_4;
+    relative_coord(6, 5): spritelayout_madtower_a_6_5;
+    relative_coord(6, 6): spritelayout_madtower_a_6_6;
+    relative_coord(6, 7): spritelayout_madtower_a_6_7;
+    relative_coord(7, 0): spritelayout_madtower_a_7_0;
+    relative_coord(7, 1): spritelayout_madtower_a_7_1;
+    relative_coord(7, 2): spritelayout_madtower_a_7_2;
+    relative_coord(7, 3): spritelayout_madtower_a_7_3;
+    relative_coord(7, 4): spritelayout_madtower_a_7_4;
+    relative_coord(7, 5): spritelayout_madtower_a_7_5;
+    relative_coord(7, 6): spritelayout_madtower_a_7_6;
+    relative_coord(7, 7): spritelayout_madtower_a_7_7;
+}
+
+switch (FEAT_OBJECTS, SELF, switch_madtower_views, [view]) {
+    0: switch_spritelayout_madtower_a;
+}
+switch (FEAT_OBJECTS, SELF, switch_madtower_menu, [view]) {
+    0: spritelayout_madtower_menu;
+}
+
+item (FEAT_OBJECTS, object_madtower) {
+	property {
+		class:                  "MISC";
+		classname:              string(STR_MBT1);
+		name:                   string(STR_OBJ_madtower);
+		climates_available:     ALL_CLIMATES;
+		size:                   [8, 8];
+		build_cost_multiplier:  8;
+		remove_cost_multiplier: 8;
+		introduction_date:      0x00000000;
+		end_of_life_date:       0xFFFFFFFF;
+		object_flags:           bitmask();
+		height:                 8;
+		num_views:              1;
+	}
+	graphics {
+		default:         switch_madtower_views;
+		purchase:        switch_madtower_menu;
+	}
+}

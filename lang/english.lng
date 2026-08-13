@@ -1,0 +1,13 @@
+##grflangid 0x01
+
+# General GRF strings
+STR_GRF_NAME:Blood Tower of BAAA-bel - Object
+STR_GRF_DESC:The DASTARDLY blood magicians of Myrmil are sacrificing droves of lambs for alchemy!
+STR_GRF_URL:
+
+# Parameters
+STR_PAR_REMOVE_NAME:Remove only by demolishing
+STR_PAR_REMOVE_DESC:{GOLD}If enabled, only the demolish tool can be used to remove an object.
+
+STR_MBT1:Magic Tower
+STR_OBJ_madtower:Blood Tower of BAAA-bel

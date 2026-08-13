@@ -1,0 +1,23 @@
+header:
+  grfid: MBT1
+  grf_desc: The DASTARDLY blood magicians of Myrmil are sacrificing droves of lambs for alchemy!
+  version: 1
+  grf_name: Blood Tower of BAAA-bel - Object
+  grf_url: 
+  min_comp_version: 0
+1:
+  classname: Magic Tower
+  image_height: 457
+  bpp_snow: 8
+  file_snow: madtowersnow.png
+  Ydim: 8
+  Xdim: 8
+  bpp: 8
+  name: Blood Tower of BAAA-bel
+  class: MBT1
+  image_width: 512
+  views:   1  
+  ground: 1
+  file: madtower.png
+  snow: ON
+  file_ground: sandstone.png
